@@ -1,3 +1,6 @@
+-- Renommage de la colonne dont le nom est tronqué
+ALTER TABLE Appellation RENAME appellatio TO appellation;
+
 -- Suppression des géométries des segments 3 et 4
 UPDATE Appellation SET geom = NULL WHERE segment IN ('3', '4');
 
